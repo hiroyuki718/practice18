@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Submission: Test Specifications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        section {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Assignment: Test Specifications</h1>
+
+<section id="multiplication-tests">
+    <h2>Unit Tests for 'multiplication' Function:</h2>
+    <ul id="multiplication-list"></ul>
+</section>
+
+<section id="concatOdds-tests">
+    <h2>Unit Tests for 'concatOdds' Function:</h2>
+    <ul id="concatOdds-list"></ul>
+</section>
+
+<section id="shoppingCart-tests">
+    <h2>Functional Tests for the Shopping Cart Checkout Feature:</h2>
+    <ul id="shoppingCart-list"></ul>
+</section>
+
+<footer>
+    <p>Created by [Your Name].</p>
+    <p>Date: [Submission Date].</p>
+</footer>
+
+<script>
+    // Test specifications
+    const multiplicationTests = [
+        "Expect multiplication(2, 3) to be a number.",
+        "Expect multiplication(2, 3) to be equal to 6.",
+        // ... (add other test specifications here)
+    ];
+
+    const concatOddsTests = [
+        "Expect concatOdds([3, 2, 1], [9, 1, 1, 1, 4, 15, -1]) to be an array.",
+        // ... (add other test specifications here)
+    ];
+
+    const shoppingCartTests = [
+        "When a user tries to checkout with an empty cart, they should be shown a message indicating the cart is empty.",
+        // ... (add other test specifications here)
+    ];
+
+    // Function to display tests on the HTML
+    function displayTests(tests, elementId) {
+        const listElement = document.getElementById(elementId);
+        tests.forEach(test => {
+            const listItem = document.createElement('li');
+            listItem.textContent = test;
+            listElement.appendChild(listItem);
+        });
+    }
+
+    // Display the tests
+    displayTests(multiplicationTests, 'multiplication-list');
+    displayTests(concatOddsTests, 'concatOdds-list');
+    displayTests(shoppingCartTests, 'shoppingCart-list');
+
+</script>
+
+</body>
+</html>
